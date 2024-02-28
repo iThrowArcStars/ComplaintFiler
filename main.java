@@ -10,11 +10,14 @@
  * 
 **/
 
+
 public class main {
     public static void main(String[] args) {
         // Example usage of log() : MyUtility.log("Hello, world!");
         
-        String userID = MyUtility.readLine("Enter your ID: ");
-        Complaint complaint = new Complaint();
+        //String userID = MyUtility.readLine("Enter your User ID: ");
+        //Complaint complaint = new Complaint();
+        MyUtility.createFile();
+        MyUtility.writeToFile("Hello");
     }
 }

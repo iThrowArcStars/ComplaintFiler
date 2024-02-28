@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class MyUtility {
@@ -22,6 +25,31 @@ public class MyUtility {
         } catch (Exception e) {
             scanner.nextLine(); // Clear the scanner buffer
             return -1;
+        }
+    }
+    // Creates a file (Totally useless just wanted to see if I could do it.)
+    public static void createFile() {
+        try {
+            File storedData = new File("storedData.csv");
+            if (storedData.createNewFile()) {
+                MyUtility.log("File created: " + storedData.getName());
+            } else {
+                MyUtility.log("That file already exists. ");
+            }
+        } catch (IOException e) {
+            MyUtility.log("There has been an error. ");
+            e.printStackTrace();
+        }
+    }
+    public static void writeToFile(String dataToWrite) {
+        try {
+            FileWriter data = new FileWriter("storedData.csv");
+            data.write(dataToWrite);
+            data.close();
+            MyUtility.log("Data has successfully been recorded. ");
+        } catch (IOException e) {
+            MyUtility.log("An error has occured. ");
+            e.printStackTrace();
         }
     }
 }

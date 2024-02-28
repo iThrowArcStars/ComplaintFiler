@@ -41,6 +41,7 @@ public class MyUtility {
             e.printStackTrace();
         }
     }
+    // Writes to a file and appends the data to the existing data
     public static void writeToFile(String dataToWrite) {
         try {
             FileWriter data = new FileWriter("storedData.csv", true);

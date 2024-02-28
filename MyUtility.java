@@ -45,7 +45,7 @@ public class MyUtility {
     public static void writeToFile(String dataToWrite) {
         try {
             FileWriter data = new FileWriter("storedData.csv", true);
-            data.write(dataToWrite);
+            data.write(dataToWrite + "\n");
             data.close();
             MyUtility.log("Data has successfully been recorded. ");
         } catch (IOException e) {

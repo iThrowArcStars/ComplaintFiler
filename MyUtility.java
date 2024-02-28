@@ -27,7 +27,7 @@ public class MyUtility {
             return -1;
         }
     }
-    // Creates a file (Totally useless just wanted to see if I could do it.)
+    // Creates a file (Totally useless I just wanted to see if I could do it.)
     public static void createFile() {
         try {
             File storedData = new File("storedData.csv");
@@ -43,7 +43,7 @@ public class MyUtility {
     }
     public static void writeToFile(String dataToWrite) {
         try {
-            FileWriter data = new FileWriter("storedData.csv");
+            FileWriter data = new FileWriter("storedData.csv", true);
             data.write(dataToWrite);
             data.close();
             MyUtility.log("Data has successfully been recorded. ");

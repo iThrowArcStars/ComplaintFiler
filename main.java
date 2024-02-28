@@ -18,6 +18,7 @@ public class main {
         //String userID = MyUtility.readLine("Enter your User ID: ");
         //Complaint complaint = new Complaint();
         MyUtility.createFile();
-        MyUtility.writeToFile("Hello");
+        Complaint complaint = new Complaint();
+        MyUtility.writeToFile(complaint.toCSV() + "\n");
     }
 }

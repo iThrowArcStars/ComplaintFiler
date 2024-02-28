@@ -7,11 +7,13 @@ public class Complaint
 
     // The constructor
     public Complaint() {
-        int caseID = (int) (Math.random() * 100000000 + 999999999);
-        String userName = MyUtility.readLine("Enter your name: ");
-        String userComplaint = MyUtility.readLine("Complaint: ");
-        this.caseID = caseID;
-        this.userName = userName;
-        this.userComplaint = userComplaint;
+        caseID = (int) (Math.random() * 100000000 + 999999999);
+        userName = MyUtility.readLine("Enter your name: ");
+        userComplaint = MyUtility.readLine("Complaint: ");
+    }
+
+    // Formats the program to a CSV type structure
+    public String toCSV() {
+        return String.format("%s,%d,%s", userName, caseID, userComplaint);
     }
 }
